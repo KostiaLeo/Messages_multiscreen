@@ -5,16 +5,105 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".WriteActivity">
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
     <RelativeLayout
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:padding="6dp">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:layout_margin="6dp"
-        android:text="От"
-        android:textSize="@dimen/nameSize"/>
+        <TextView
+            android:id="@+id/from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_margin="6dp"
+            android:text="@string/from"
+            android:textSize="@dimen/nameSize"/>
+        <EditText
+            android:id="@+id/inputFrom"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@id/from"
+            android:inputType="text"/>
+
+        <TextView
+            android:id="@+id/to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_margin="6dp"
+            android:text="@string/to"
+            android:textSize="@dimen/nameSize"
+            android:layout_below="@id/from"
+            />
+        <EditText
+            android:layout_marginTop="8dp"
+            android:id="@+id/inputTo"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@id/to"
+            android:layout_below="@id/inputFrom"
+            android:inputType="text"/>
+
+        <TextView
+            android:id="@+id/theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_margin="6dp"
+            android:text="@string/subject"
+            android:textSize="@dimen/nameSize"
+            android:layout_below="@id/to"
+            />
+        <EditText
+            android:layout_marginTop="6dp"
+            android:id="@+id/inputTheme"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@id/theme"
+            android:layout_below="@id/inputTo"
+            android:inputType="text"/>
+        <EditText
+            android:layout_marginTop="@dimen/fab_margin"
+            android:id="@+id/inputMessage"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_below="@id/inputTheme"
+            android:hint="@string/text"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="2000"
+            />
+       <LinearLayout
+           android:layout_height="wrap_content"
+           android:layout_width="wrap_content"
+           android:orientation="horizontal"
+           android:id="@+id/checkboxing"
+           android:layout_alignParentBottom="true"
+           android:layout_marginBottom="25dp">
+           <CheckBox
+               android:layout_height="wrap_content"
+               android:layout_width="wrap_content"
+               />
+           <TextView
+               android:layout_height="wrap_content"
+               android:layout_width="150dp"
+               android:text="@string/business_signature"
+               android:textSize="@dimen/nameSize"
+               />
+       </LinearLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/send_button"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/fab_margin"
+            android:text="@string/send"
+            android:textColor="@color/white"
+            android:padding="8dp"
+            />
     </RelativeLayout>
+</LinearLayout>
 </android.support.constraint.ConstraintLayout>
