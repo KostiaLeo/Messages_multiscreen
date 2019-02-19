@@ -17,7 +17,6 @@
             android:layout_marginTop="@dimen/img_margtop"
             android:layout_marginRight="@dimen/line_margtop"
             android:scaleType="centerCrop"
-            android:background="@color/colorPrimary"
             />
         <TextView
             android:layout_toRightOf="@id/ava"

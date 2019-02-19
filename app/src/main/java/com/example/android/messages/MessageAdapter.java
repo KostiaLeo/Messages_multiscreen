@@ -1,6 +1,5 @@
 package com.example.android.messages;
 
-import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -16,13 +15,11 @@ import java.util.List;
 public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHolder>  {
     private List<Message> messageList;
     private EmailItemClicked callback;
-    private List<String> myUrls;
     //---------------------------------------------------------------------------------------
 
-    MessageAdapter(List<Message> messages, EmailItemClicked callback, List<String> myUrls) {
+    MessageAdapter(List<Message> messages, EmailItemClicked callback) {
         this.messageList = messages;
         this.callback = callback;
-        this.myUrls = myUrls;
     }
 
     @NonNull
@@ -63,21 +60,15 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
         holder.textTv.setText(message.getText());
         holder.timeTv.setText(message.getTime());
 
-        ImageView ava = (holder).ava;
-        String currentUrl = myUrls.get(position);
-        Glide.with(ava)
-                .load(currentUrl)
-                .into(ava);
+        Glide.with(holder.itemView.getContext())
+                .load(message.link)
+                .into(holder.ava);
 
     }
-
-    //----------------------------------------------------------------------------------------------------
 
     interface EmailItemClicked {
         void itemClickedCallback(int itemPosition);
     }
-
-    //------------------------------------------------------------------------------------------------------
 
     class ViewHolder extends RecyclerView.ViewHolder {
         TextView nameTv, titleTv, textTv, timeTv;

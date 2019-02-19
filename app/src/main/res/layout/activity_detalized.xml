@@ -12,16 +12,16 @@
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:layout_margin="10dp">
+        android:layout_margin="@dimen/layour_marg">
         <TextView
-            android:paddingTop="15dp"
-            android:paddingRight="15dp"
-            android:paddingBottom="15dp"
-            android:paddingLeft="8dp"
+            android:paddingTop="@dimen/paddingName"
+            android:paddingRight="@dimen/paddingName"
+            android:paddingBottom="@dimen/paddingName"
+            android:paddingLeft="@dimen/paddingLeftName"
             android:id="@+id/full_name"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:textSize="20sp"
+            android:textSize="@dimen/txtSizeName_Title"
             android:textAllCaps="true"
             android:textColor="@color/black"
             android:text="Name" />
@@ -31,18 +31,18 @@
             android:background="@color/black" />
 
         <TextView
-            android:paddingTop="16dp"
-            android:paddingLeft="8dp"
-            android:paddingBottom="8dp"
-            android:paddingRight="8dp"
+            android:paddingTop="@dimen/paddingTopTitle"
+            android:paddingLeft="@dimen/paddingTitle_Text"
+            android:paddingBottom="@dimen/paddingTitle_Text"
+            android:paddingRight="@dimen/paddingTitle_Text"
             android:id="@+id/full_title"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:textSize="20sp"
-            android:textColor="#474646"
+            android:textSize="@dimen/txtSizeName_Title"
+            android:textColor="@color/detalTitleTextColor"
             android:text="Title" />
         <TextView
-            android:padding="8dp"
+            android:padding="@dimen/paddingTitle_Text"
             android:id="@+id/full_text"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
@@ -50,7 +50,7 @@
             android:text="Text"
             android:textColor="@color/black" />
         <TextView
-            android:padding="8dp"
+            android:padding="@dimen/paddingLeftName"
             android:id="@+id/full_time"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
@@ -61,26 +61,26 @@
         android:id="@+id/forward"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#E9E9E9"
+        android:background="@color/btnColor"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="@dimen/fab_margin"
-        android:text="Forward"
+        android:text="@string/forward"
         android:textColor="@color/black"
-        android:padding="8dp"
+        android:padding="@dimen/paddingTitle_Text"
         android:layout_margin="@dimen/fab_margin"
         />
     <Button
         android:id="@+id/reply"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#E9E9E9"
+        android:background="@color/btnColor"
         android:layout_alignParentBottom="true"
         android:layout_toLeftOf="@id/forward"
         android:layout_marginBottom="@dimen/fab_margin"
-        android:text="Reply"
+        android:text="@string/reply"
         android:textColor="@color/black"
-        android:padding="8dp"
+        android:padding="@dimen/paddingTitle_Text"
         />
 </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

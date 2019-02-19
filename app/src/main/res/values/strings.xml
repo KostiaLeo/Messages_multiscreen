@@ -7,5 +7,6 @@
     <string name="text">Текст сообщения</string>
     <string name="business_signature">Деловая подпись</string>
     <string name="send">Отправить</string>
-
+    <string name="forward">Вперед</string>
+    <string name="reply">Ответить</string>
 </resources>

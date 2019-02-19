@@ -16,5 +16,9 @@
     <dimen name="txtSizeName_Title">20sp</dimen>
     <dimen name="paddingTitle_Text">8sp</dimen>
     <dimen name="paddingTopTitle">16sp</dimen>
-
+    <dimen name="layour_marg">10dp</dimen>
+    <!--activity_write dimens-->
+    <dimen name="layout_padd">6dp</dimen>
+    <dimen name="textViewPadd">8dp</dimen>
+    <dimen name="checkboxingMargBot">25dp</dimen>
 </resources>

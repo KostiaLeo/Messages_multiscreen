@@ -12,13 +12,13 @@
     <RelativeLayout
         android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:padding="6dp">
+        android:padding="@dimen/layout_padd">
         <TextView
             android:id="@+id/from"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:layout_margin="6dp"
+            android:padding="@dimen/textViewPadd"
+            android:layout_margin="@dimen/layout_padd"
             android:text="@string/from"
             android:textSize="@dimen/nameSize"/>
         <EditText
@@ -32,14 +32,14 @@
             android:id="@+id/to"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:layout_margin="6dp"
+            android:padding="@dimen/textViewPadd"
+            android:layout_margin="@dimen/layout_padd"
             android:text="@string/to"
             android:textSize="@dimen/nameSize"
             android:layout_below="@id/from"
             />
         <EditText
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/textViewPadd"
             android:id="@+id/inputTo"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
@@ -51,14 +51,14 @@
             android:id="@+id/theme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:layout_margin="6dp"
+            android:padding="@dimen/textViewPadd"
+            android:layout_margin="@dimen/layout_padd"
             android:text="@string/subject"
             android:textSize="@dimen/nameSize"
             android:layout_below="@id/to"
             />
         <EditText
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="@dimen/layout_padd"
             android:id="@+id/inputTheme"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
